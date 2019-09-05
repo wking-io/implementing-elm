@@ -92,7 +92,7 @@ export const NewsletterInput = ({ className, ...props }) => {
             onChange={({ target }) => setEmail(target.value)}
           />
           <input
-            className={`btn w-auto px-3 capitalize ${getInputClass(valid)}`}
+            className={`btn w-auto px-4 capitalize ${getInputClass(valid)}`}
             type="submit"
             value="Join The Launch List"
             disabled={isDisabled(valid)}
