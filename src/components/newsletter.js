@@ -64,30 +64,41 @@ export const NewsletterInput = ({ className, ...props }) => {
       netlify-honeypot="bot-field"
       data-netlify="true"
     >
-      <div
-        className={`newsletter-input bg-black border border-white p-2 flex flex-col md:flex-row justify-between w-full relative z-20`}
-      >
-        <input type="hidden" name="form-name" value="newsletter-signups" />
-        <VisuallyHidden>
-          <label>
-            Don’t fill this out if you're human: <input name="bot-field" />
-          </label>
-        </VisuallyHidden>
-        <input
-          className="pt-2 text-center md:text-left pb-4 md:p-2 flex-1 text-white bg-transparent"
-          type="text"
-          placeholder="Enter email address..."
-          name="Email Address"
-          onBlur={validateForm}
-          onChange={({ target }) => setEmail(target.value)}
-        />
-        <input
-          className={`btn w-auto px-3 capitalize ${getInputClass(valid)}`}
-          type="submit"
-          value="Notify Me At Launch"
-          disabled={isDisabled(valid)}
-          onMouseEnter={validateForm}
-        />
+      <div className={`newsletter-input bg-black relative z-20`}>
+        <div className="absolute bg-black border border-white z-10 w-full inset-0 h-full"></div>
+        <div className="newsletter-input-glitch">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div className="newsletter-input-glitch-02">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div className="relative w-full z-30 p-2 flex flex-col md:flex-row justify-between">
+          <input type="hidden" name="form-name" value="newsletter-signups" />
+          <VisuallyHidden>
+            <label>
+              Don’t fill this out if you're human: <input name="bot-field" />
+            </label>
+          </VisuallyHidden>
+          <input
+            className="pt-2 text-center md:text-left pb-4 md:p-2 flex-1 text-white bg-transparent"
+            type="text"
+            placeholder="Enter email address..."
+            name="Email Address"
+            onBlur={validateForm}
+            onChange={({ target }) => setEmail(target.value)}
+          />
+          <input
+            className={`btn w-auto px-3 capitalize ${getInputClass(valid)}`}
+            type="submit"
+            value="Join The Launch List"
+            disabled={isDisabled(valid)}
+            onMouseEnter={validateForm}
+          />
+        </div>
       </div>
       <div
         className={`newsletter-error${

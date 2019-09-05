@@ -65,6 +65,74 @@
   border-radius: 5px;
 }
 
+.newsletter-input-bg {
+  @apply absolute inset-0 w-full h-full;
+}
+
+.newsletter-input-glitch {
+  @apply absolute inset-0 w-full h-full;
+  animation: 5s glitch-input 0.5s linear infinite both;
+}
+
+.newsletter-input-glitch > span {
+  @apply absolute inset-0 blend-screen;
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
+  content: '';
+  background-color: theme('colors.glitch.red');
+  transform: translate(-16px, -4px);
+}
+
+.newsletter-input-glitch > span:first-child {
+  @apply absolute inset-0 blend-screen;
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
+  content: '';
+  background-color: theme('colors.glitch.green');
+  transform: translate(-6px, -10px);
+}
+
+.newsletter-input-glitch > span:last-child {
+  @apply absolute inset-0 blend-screen;
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
+  content: '';
+  background-color: theme('colors.glitch.blue');
+  transform: translate(-8px, -2px);
+}
+
+.newsletter-input-glitch-02 {
+  @apply absolute inset-0 w-full h-full;
+  animation: 5s glitch-input-02 0.5s linear infinite both;
+}
+
+.newsletter-input-glitch-02 > span {
+  @apply absolute inset-0 blend-screen;
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
+  content: '';
+  background-color: theme('colors.glitch.red');
+  transform: translate(-8px, -6px);
+}
+
+.newsletter-input-glitch-02 > span:first-child {
+  @apply absolute inset-0 blend-screen;
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
+  content: '';
+  background-color: theme('colors.glitch.green');
+  transform: translate(-4px, -8px);
+}
+
+.newsletter-input-glitch-02 > span:last-child {
+  @apply absolute inset-0 blend-screen;
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
+  content: '';
+  background-color: theme('colors.glitch.blue');
+  transform: translate(4px, 6px);
+}
+
 .newsletter-error {
   transform: translateY(-100%);
   transition: transform 0.4s cubic-bezier(0.755, 0.05, 0.855, 0.06);
@@ -197,6 +265,96 @@ body {
   }
 }
 
+@keyframes glitch-input {
+  0% {
+    opacity: 0;
+  }
+  0.25% {
+    opacity: 0;
+  }
+  0.5% {
+    opacity: 1;
+  }
+  0.75% {
+    opacity: 0;
+  }
+  1.25% {
+    opacity: 0;
+  }
+  1.5% {
+    opacity: 1;
+  }
+  1.75% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+  }
+  5.5% {
+    opacity: 1;
+  }
+  6% {
+    opacity: 0;
+  }
+  8% {
+    opacity: 0;
+  }
+  8.5% {
+    opacity: 1;
+  }
+  9% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes glitch-input-02 {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 0;
+  }
+  2.5% {
+    opacity: 1;
+  }
+  3% {
+    opacity: 0;
+  }
+  3.5% {
+    opacity: 0;
+  }
+  4% {
+    opacity: 1;
+  }
+  4.5% {
+    opacity: 0;
+  }
+  13.5% {
+    opacity: 0;
+  }
+  14% {
+    opacity: 1;
+  }
+  14.5% {
+    opacity: 0;
+  }
+  17% {
+    opacity: 0;
+  }
+  17.5% {
+    opacity: 1;
+  }
+  18% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes glitch-01 {
   0% {
     opacity: 0;
@@ -310,7 +468,7 @@ body {
 }
 
 .glitch-01 {
-  animation: 5s glitch-01 0.5s linear infinite both;
+  animation: 5s glitch-00.5s linear infinite both;
 }
 
 .glitch-02 {
