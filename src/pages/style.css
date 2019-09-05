@@ -13,7 +13,7 @@
 }
 
 .btn {
-  @apply text-white bg-black rounded leading-none text-center inline-block py-4 px-12 font-medium shadow cursor-pointer;
+  @apply text-black bg-white leading-none text-center inline-block py-4 px-12 font-medium shadow cursor-pointer;
   transition: all 0.1s ease-in-out;
 }
 
@@ -65,12 +65,14 @@
   border-radius: 5px;
 }
 
-.newsletter-light {
-  box-shadow: 8px 8px 0 0 theme('colors.grey.200');
+.newsletter-error {
+  transform: translateY(-100%);
+  transition: transform 0.4s cubic-bezier(0.755, 0.05, 0.855, 0.06);
 }
 
-.newsletter-dark {
-  box-shadow: 8px 8px 0 0 theme('colors.grey.800');
+.newsletter-error--visible {
+  transform: translateY(0);
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 @tailwind utilities;
