@@ -36,9 +36,7 @@ const IndexPage = () => (
     </section>
     <section className="w-11/12 md:w-5/6 max-w-5xl mx-auto px-12 pt-6 text-white">
       <div className="h-px bg-white mb-16"></div>
-      <div className="mb-16 text-lg">
-      <p className="mb-16 leading-relaxed">Implementing Elm will dive deep into specific problems to help the Elm community get better together by listening to real implementation stories from the Elm community. Although we have a strong and helpful community (one of the best in development in my opinion) Elm is young. The depth of resources that share a team or community members perspective on implementing Elm features in production can be better and I want to help. Implementing Elm will be a platform that shares real implementation stories from the community. Both through audio, text, and who know what else we can do.</p>
-      </div>
+      <p className="mb-16 leading-relaxed text-lg">Implementing Elm will dive deep into specific problems to help the Elm community get better together by listening to real implementation stories from the Elm community. Although we have a strong and helpful community (one of the best in development in my opinion) Elm is young. The depth of resources that share a team or community members perspective on implementing Elm features in production can be better and I want to help. Implementing Elm will be a platform that shares real implementation stories from the community. Both through audio, text, and who know what else we can do.</p>
     </section>
   </Layout>
 );
