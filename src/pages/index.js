@@ -17,12 +17,12 @@ import {
 
 const IndexPage = () => (
   <Layout>
-    <section className="flex flex-col min-h-screen bg-black">
-      <div>
+    <section className="flex flex-col items-center justify-center min-h-screen bg-black">
+      <div className="w-11/12 md:w-5/6 max-w-5xl mx-auto">
         <VisuallyHidden>
           <h1>Implementing Elm</h1>
         </VisuallyHidden>
-        <div className="w-5/6 max-w-4xl mt-20 mx-auto" aria-hidden>
+        <div aria-hidden>
           <div className="relative mb-10">
             <GlitchBase className="glitch-base" />
             <GlitchOne className="glitch-01 absolute w-full inset-0 opacity-0" />
@@ -30,8 +30,14 @@ const IndexPage = () => (
             <GlitchThree className="glitch-03 absolute w-full inset-0 opacity-0" />
             <GlitchFour className="glitch-04 absolute w-full inset-0 opacity-0" />
           </div>
-          <NewsletterInput className="w-4/5 mx-auto" />
+          <NewsletterInput className="w-full md:w-4/5 px-4 md:mx-auto" />
         </div>
+      </div>
+    </section>
+    <section className="w-11/12 md:w-5/6 max-w-5xl mx-auto px-12 pt-6 text-white">
+      <div className="h-px bg-white mb-16"></div>
+      <div className="mb-16 text-lg">
+      <p className="mb-16 leading-relaxed">Implementing Elm will dive deep into specific problems to help the Elm community get better together by listening to real implementation stories from the Elm community. Although we have a strong and helpful community (one of the best in development in my opinion) Elm is young. The depth of resources that share a team or community members perspective on implementing Elm features in production can be better and I want to help. Implementing Elm will be a platform that shares real implementation stories from the community. Both through audio, text, and who know what else we can do.</p>
       </div>
     </section>
   </Layout>
