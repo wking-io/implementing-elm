@@ -3,7 +3,8 @@ import VisuallyHidden from '@reach/visually-hidden';
 
 const Survey = () => {
   const [showOther, setShowOther] = useState(false);
-  const [otherValue, setOtherValue] = useState('');
+  const [otherField, setOtherField] = useState('');
+  const [selection, setSelection] = useState('');
   const otherFieldRef = useRef(null);
 
   return (
@@ -14,8 +15,10 @@ const Survey = () => {
       netlify-honeypot="bot-field"
       data-netlify="true"
       className="w-full"
+      id="survey-next-season-01"
     >
       <input type="hidden" name="form-name" value="next-season-01" />
+      <input type="hidden" name="selection" value={selection} />
       <VisuallyHidden>
         <label>
           Don’t fill this out if you're human: <input name="bot-field" />
@@ -29,7 +32,10 @@ const Survey = () => {
             id="dnd"
             value="dnd"
             name="next-season-choice"
-            onChange={() => setShowOther(false)}
+            onChange={() => {
+              setShowOther(false);
+              setSelection('dnd');
+            }}
           />
           <label
             className="ui-checkbox__label w-full border border-white"
@@ -47,7 +53,10 @@ const Survey = () => {
             id="draw"
             value="draw"
             name="next-season-choice"
-            onChange={() => setShowOther(false)}
+            onChange={() => {
+              setShowOther(false);
+              setSelection('draw');
+            }}
           />
           <label
             className="ui-checkbox__label w-full border border-white"
@@ -65,7 +74,10 @@ const Survey = () => {
             id="metrics"
             value="metrics"
             name="next-season-choice"
-            onChange={() => setShowOther(false)}
+            onChange={() => {
+              setShowOther(false);
+              setSelection('metrics');
+            }}
           />
           <label
             className="ui-checkbox__label w-full border border-white"
@@ -86,6 +98,7 @@ const Survey = () => {
             onChange={() => {
               setShowOther(true);
               otherFieldRef.current.focus();
+              setSelection(otherField);
             }}
           />
           <label
@@ -105,14 +118,20 @@ const Survey = () => {
           name="other-value"
           placeholder="Enter other topic here"
           ref={otherFieldRef}
-          value={otherValue}
-          onChange={({ target }) => setOtherValue(target.value)}
+          value={otherField}
+          onChange={({ target }) => {
+            setOtherField(target.value);
+            setSelection(`Other: ${target.value}`);
+          }}
         />
       </div>
       <input
-        className="btn btn--primary block mt-8 cursor-pointer w-full"
+        className={`btn btn--primary block mt-8 w-full ${
+          selection.length > 0 ? 'cursor-pointer' : 'cursor-not-allowed'
+        }`}
         type="submit"
         value="Submit Survey"
+        disabled={selection.length === 0}
       />
     </form>
   );

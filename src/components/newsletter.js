@@ -25,10 +25,6 @@ export const NewsletterInput = ({ className, ...props }) => {
   const getInputClass = validState => {
     if (validState === VALID) {
       return 'cursor-pointer';
-    } else if (validState === EMAIL_ERROR) {
-      return 'cursor-not-allowed';
-    } else if (validState === EMAIL_EMPTY) {
-      return 'cursor-not-allowed';
     }
     return 'cursor-not-allowed';
   };
@@ -63,6 +59,7 @@ export const NewsletterInput = ({ className, ...props }) => {
       action="/newsletter-thank-you"
       netlify-honeypot="bot-field"
       data-netlify="true"
+      {...props}
     >
       <div className={`newsletter-input bg-black relative z-20`}>
         <div className="absolute bg-black border border-white z-10 w-full inset-0 h-full"></div>
@@ -110,37 +107,3 @@ export const NewsletterInput = ({ className, ...props }) => {
     </form>
   );
 };
-
-export const Newsletter = ({ dark = true, project = 'default' }) => (
-  <div
-    className={`${
-      dark ? 'bg-black text-white' : 'bg-white text-black'
-    } font-sans text-center py-20 px-8 md:px-16`}
-  >
-    <div className="max-w-3xl mx-auto">
-      <h3 className="text-3xl md:text-4xl font-display font-bold mb-6 leading-tight">
-        Get this stuff shoved in your inbox!
-      </h3>
-      <p
-        className={`${
-          dark ? 'text-grey-300' : 'text-black'
-        } leading-relaxed mb-12`}
-      >
-        Okay not really, but If you would like to hear about progress on
-        projects like elm-live and elm-press or be a part of the research and
-        direction of the projects feel free to signup for my newsletter below.
-        If you don’t want to do that you can always{' '}
-        <a
-          className={`link ${
-            project === 'elm-press' ? 'link--secondary' : null
-          }`}
-          href="https://twitter.com/@wking__"
-        >
-          follow me on Twitter
-        </a>{' '}
-        and I will try and make updates there too.
-      </p>
-      <NewsletterInput dark={dark} project={project} />
-    </div>
-  </div>
-);

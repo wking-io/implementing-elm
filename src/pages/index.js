@@ -29,13 +29,16 @@ const IndexPage = () => (
             <GlitchThree className="glitch-03 absolute w-full inset-0 opacity-0" />
             <GlitchFour className="glitch-04 absolute w-full inset-0 opacity-0" />
           </div>
-          <NewsletterInput className="w-full md:w-4/5 px-4 md:mx-auto" />
+          <NewsletterInput
+            id="newsletter-home-hero"
+            className="w-full px-4 md:px-12 md:mx-auto"
+          />
         </div>
       </div>
     </section>
-    <section className="w-11/12 md:w-5/6 max-w-5xl mx-auto px-12 pt-6 text-white">
+    <section className="w-11/12 md:w-5/6 max-w-5xl mx-auto px-4 md:px-12 pt-6 text-white">
       <div className="h-px bg-white mb-16"></div>
-      <p className="mb-12 leading-relaxed text-lg">
+      <p className="mb-12 leading-relaxed lg:text-lg">
         Implementing Elm will dive deep into specific problems to help the Elm
         community get better together by listening to real implementation
         stories from the Elm community. Although we have a strong and helpful
@@ -47,11 +50,11 @@ const IndexPage = () => (
         who know what else we can do.
       </p>
     </section>
-    <section className="w-11/12 md:w-5/6 max-w-5xl mx-auto px-12 pt-6 pb-16 text-white">
+    <section className="w-11/12 md:w-5/6 max-w-5xl mx-auto px-4 md:px-12 pt-6 pb-16 text-white">
       <div className="h-px bg-white mb-16"></div>
       <div className="flex flex-col lg:flex-row">
-        <div>
-          <h2 className="text-5xl font-display uppercase tracking-wide">
+        <div className="lg:max-w-sm lg:mr-16 mb-8">
+          <h2 className="text-5xl font-display uppercase tracking-wide leading-tight mb-4">
             Tell Me What You Want To Hear
           </h2>
           <p>

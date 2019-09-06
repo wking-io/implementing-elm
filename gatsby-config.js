@@ -1,4 +1,4 @@
-require(`dotenv`).config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
@@ -14,37 +14,45 @@ module.exports = {
     twitterUsername: '@wking__',
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-json`,
+    'gatsby-plugin-react-helmet',
+    'gatsby-transformer-json',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `src`,
+        name: 'src',
         path: `${__dirname}/src`,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `content`,
+        name: 'content',
         path: `${__dirname}/content`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `Implementing Elm`,
-        short_name: `IH`,
-        start_url: `/`,
-        background_color: `#0b1319`,
-        theme_color: `#0b1319`,
-        display: `minimal-ui`,
-        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+        name: 'Implementing Elm',
+        short_name: 'IH',
+        start_url: '/',
+        background_color: '#0b1319',
+        theme_color: '#0b1319',
+        display: 'minimal-ui',
+        icon: 'src/images/favicon.png', // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-postcss`,
-    `gatsby-plugin-offline`,
+    'gatsby-plugin-postcss',
+    'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: 'GTM-TB3FLB3',
+        includeInDevelopment: true,
+        defaultDataLayer: { platform: 'gatsby' },
+      },
+    },
   ],
 };
