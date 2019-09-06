@@ -40,7 +40,7 @@
 
 .newsletter-input-glitch {
   @apply absolute inset-0 w-full h-full;
-  animation: 5s glitch-input 0.5s linear infinite both;
+  animation: 5s glitch-input 0.5s linear 1 both;
 }
 
 .newsletter-input-glitch > span {
@@ -72,7 +72,7 @@
 
 .newsletter-input-glitch-02 {
   @apply absolute inset-0 w-full h-full;
-  animation: 5s glitch-input-02 0.5s linear infinite both;
+  animation: 5s glitch-input-02 0.5s linear 1 both;
 }
 
 .newsletter-input-glitch-02 > span {
@@ -445,21 +445,21 @@ body {
 }
 
 .glitch-base {
-  animation: 5s glitch-logo 0.5s linear infinite both;
+  animation: 5s glitch-logo 0.5s linear 1 both;
 }
 
 .glitch-01 {
-  animation: 5s glitch-00.5s linear infinite both;
+  animation: 5s glitch-00.5s linear 1 both;
 }
 
 .glitch-02 {
-  animation: 5s glitch-02 0.5s linear infinite both;
+  animation: 5s glitch-02 0.5s linear 1 both;
 }
 
 .glitch-03 {
-  animation: 5s glitch-03 0.5s linear infinite both;
+  animation: 5s glitch-03 0.5s linear 1 both;
 }
 
 .glitch-04 {
-  animation: 5s glitch-04 0.5s linear infinite both;
+  animation: 5s glitch-04 0.5s linear 1 both;
 }
