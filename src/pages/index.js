@@ -13,9 +13,11 @@ import {
   GlitchFour,
 } from '../components/glitch';
 import Survey from '../components/survey';
+import SEO from '../components/seo';
 
 const IndexPage = () => (
   <Layout>
+    <SEO />
     <section className="flex flex-col items-center justify-center min-h-screen bg-black">
       <div className="w-11/12 md:w-5/6 max-w-5xl mx-auto">
         <VisuallyHidden>
