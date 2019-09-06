@@ -1,15 +1,11 @@
 @tailwind base;
 
 .link {
-  @apply bg-gradient font-medium;
-  background-repeat: no-repeat;
-  background-size: 100% 4px;
-  background-position: 0 92%;
-  transition: background-image 0.25s ease-in;
+  @apply underline font-medium;
 }
 
 .link:hover {
-  @apply bg-gradient-hover;
+  @apply no-underline;
 }
 
 .btn {
