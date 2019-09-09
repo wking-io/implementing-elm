@@ -126,7 +126,7 @@ const Survey = () => {
         />
       </div>
       <input
-        className={`btn btn--primary block mt-8 w-full ${
+        className={`btn btn--primary block mt-8 w-full rounded-none ${
           selection.length > 0 ? 'cursor-pointer' : 'cursor-not-allowed'
         }`}
         type="submit"

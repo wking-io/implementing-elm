@@ -9,8 +9,12 @@
 }
 
 .btn {
-  @apply text-black bg-white leading-none text-center inline-block py-4 px-12 font-medium shadow cursor-pointer;
+  @apply text-black bg-white leading-none text-center inline-block py-4 px-12 font-medium shadow cursor-pointer rounded-none;
   transition: all 0.1s ease-in-out;
+}
+
+.btn:disabled {
+  @apply bg-white text-black opacity-100;
 }
 
 .btn:hover:not(:disabled) {
@@ -18,11 +22,16 @@
 }
 
 .btn--outline {
-  @apply bg-transparent border border-grey-300 text-white font-medium;
+  @apply bg-transparent border border-white text-white font-medium;
 }
 
 .btn--outline:hover:not(:disabled) {
-  @apply bg-grey-300 border border-grey-300 text-black font-medium;
+  @apply bg-white border border-white text-black font-medium;
+}
+
+.btn--outline:disabled {
+  background-color: theme('colors.white') !important;
+  opacity: 1 !important;
 }
 
 .ui-checkbox__input {

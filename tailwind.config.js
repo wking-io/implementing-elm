@@ -37,6 +37,7 @@ module.exports = {
         'Noto Color Emoji',
       ],
       display: [
+        'league-gothic',
         'League Gothic',
         '-apple-system',
         'BlinkMacSystemFont',
