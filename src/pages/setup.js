@@ -9,7 +9,7 @@ const Setup = ({ data }) => (
   <Layout>
     <SEO title="Podcast Setup & Equipment" />
     <div
-      className="max-w-3xl mx-auto px-8 py-20 flex flex-col min-h-screen text-white
+      className="w-11/12 md:w-5/6 max-w-5xl mx-auto px-4 md:px-12 py-20 flex flex-col min-h-screen text-white
     "
     >
       <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold mb-12 leading-tight uppercase tracking-wide">
@@ -24,7 +24,7 @@ const Setup = ({ data }) => (
                 key={link + type}
                 className="setup-item mb-8 border-b border-grey-400"
               >
-                <Link to={link}>
+                <Link to={link} className="hover:underline">
                   <p className="uppercase text-sm mb-1 text-grey-400">{type}</p>
                   <p className="mb-8">{name}</p>
                 </Link>

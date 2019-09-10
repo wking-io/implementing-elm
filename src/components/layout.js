@@ -2,8 +2,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-// Components
-
 const Layout = ({ children }) => (
   <>
     <Helmet>
