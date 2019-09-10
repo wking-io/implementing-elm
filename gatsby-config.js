@@ -30,6 +30,13 @@ module.exports = {
         path: `${__dirname}/content`,
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'setup',
+        path: `${__dirname}/setup`,
+      },
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {

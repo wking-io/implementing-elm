@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Equipment",
+    "items": [
+      {
+        "type": "stand",
+        "name": "NEUMA Professional Microphone Stand with Pop Filter",
+        "link": "https://amzn.to/34DUMAo"
+      },
+      {
+        "type": "microphone",
+        "name": "sE Electronics V7 Handheld Dynamic Microphone",
+        "link": "https://amzn.to/32yUQQg"
+      },
+      {
+        "type": "preamp",
+        "name": "BEHRINGER U-PHORIA UMC202HD, 2-Channel",
+        "link": "https://amzn.to/32tK9OO"
+      },
+      {
+        "type": "cord",
+        "name": "AmazonBasics XLR Male to Female Microphone Cable - 6 Feet, Black",
+        "link": "https://amzn.to/2NVf8Q2"
+      }
+    ]
+  },
+  {
+    "title": "Services",
+    "items": [
+      {
+        "type": "hosting",
+        "name": "Transistor.fm",
+        "link": ""
+      },
+      {
+        "type": "Editing",
+        "name": "Adobe Audition CC",
+        "link": ""
+      }
+    ]
+  }
+]
