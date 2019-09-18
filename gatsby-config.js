@@ -40,6 +40,10 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
+      resolve: `gatsby-plugin-mdx`,
+      options: {},
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Implementing Elm',

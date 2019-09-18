@@ -13,10 +13,11 @@ import {
   GlitchFour,
 } from '../components/glitch';
 import Survey from '../components/survey';
+import Link from '../components/link';
 import SEO from '../components/seo';
 
 const IndexPage = () => (
-  <Layout>
+  <Layout noNav>
     <SEO />
     <section className="flex flex-col items-center justify-center min-h-screen bg-black">
       <div className="w-11/12 md:w-5/6 max-w-5xl mx-auto">
@@ -24,7 +25,7 @@ const IndexPage = () => (
           <h1>Implementing Elm</h1>
         </VisuallyHidden>
         <div aria-hidden>
-          <div className="relative mb-10">
+          <div className="relative">
             <GlitchBase className="glitch-base" />
             <GlitchOne className="glitch-01 absolute w-full inset-0 opacity-0" />
             <GlitchTwo className="glitch-02 absolute w-full inset-0 opacity-0" />
@@ -35,6 +36,16 @@ const IndexPage = () => (
             id="newsletter-home-hero"
             className="w-full px-4 md:px-12 md:mx-auto"
           />
+          <p className="text-center text-white">
+            🎙{' '}
+            <Link
+              to="/episodes/000-getting-better-together"
+              className="link text-white mx-2 uppercase"
+            >
+              Listen to the trailer to learn more
+            </Link>{' '}
+            🎙
+          </p>
         </div>
       </div>
     </section>
@@ -59,7 +70,7 @@ const IndexPage = () => (
           <h2 className="text-5xl font-display uppercase tracking-wide leading-tight mb-4">
             Tell Me What You Want To Hear
           </h2>
-          <p>
+          <p className="leading-relaxed">
             The first season is already locked down for exploring text
             editing/parsing implementation stories, but get your vote in for the
             upcoming seasons.
