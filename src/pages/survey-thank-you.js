@@ -7,7 +7,7 @@ import { NewsletterInput } from '../components/newsletter';
 
 const SurveyThankYou = () => (
   <Layout>
-    <SEO title="Thank You" />
+    <SEO title="Thank You For Submitting A Response" />
     <div
       className="max-w-3xl mx-auto px-8 md:px-12 flex flex-col min-h-screen md:items-center justify-center md:text-center text-white
     "
