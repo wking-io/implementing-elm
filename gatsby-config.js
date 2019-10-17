@@ -5,7 +5,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title:
-      'An Elm podcast sharing real implementation stories from the community | Implementing Elm',
+      'An Elm podcast sharing real implementation stories from the community',
     titleTemplate: '%s | Implementing Elm',
     description:
       'A seasonal Elm podcast where we will dive deep into specific problems to help the Elm community get better together by listening to real implementation stories from the Elm community.',
