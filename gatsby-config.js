@@ -9,7 +9,7 @@ module.exports = {
     titleTemplate: '%s | Implementing Elm',
     description:
       'A seasonal Elm podcast where we will dive deep into specific problems to help the Elm community get better together by listening to real implementation stories from the Elm community.',
-    url: 'https://www.implementingelm.com',
+    siteUrl: 'https://www.implementingelm.com',
     image: '/images/favicon.png',
     twitterUsername: '@wking__',
   },
@@ -63,6 +63,51 @@ module.exports = {
         id: 'GTM-TB3FLB3',
         includeInDevelopment: false,
         defaultDataLayer: { platform: 'gatsby' },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: ['/category/*', `/path/to/page`],
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+  
+            allSitePage {
+              edges {
+                node {
+                  path
+                }
+              }
+            }
+
+            allMdx {
+              edges {
+                node {
+                  id
+                  fields {
+                    slug
+                  }
+                }
+              }
+            }
+        }`,
+        serialize: ({ site, allSitePage, allMdx }) => [
+          ...allSitePage.edges.map(edge => ({
+            url: site.siteMetadata.siteUrl + edge.node.path,
+            changefreq: `daily`,
+            priority: 0.7,
+          })),
+          ...allMdx.edges.map(edge => ({
+            url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+            changefreq: `daily`,
+            priority: 0.7,
+          })),
+        ],
       },
     },
   ],
