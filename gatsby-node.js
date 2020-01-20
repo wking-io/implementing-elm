@@ -8,7 +8,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       name: `slug`,
       node,
-      value: `${slug}`,
+      value: `${slug.replace('/episodes', '')}`
     });
   }
 };
@@ -41,8 +41,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       path: node.fields.slug,
       component: path.resolve(`./src/templates/episode.js`),
       context: {
-        id: node.id,
-      },
+        id: node.id
+      }
     });
   });
 };
