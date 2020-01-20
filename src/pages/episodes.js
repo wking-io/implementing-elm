@@ -18,9 +18,7 @@ export default ({ data }) => {
                 <h2 className="text-4xl sm:text-5xl md:text-6xl font-display mb-3 leading-tight uppercase tracking-wide">
                   {node.frontmatter.title}
                 </h2>
-                <p className="leading-relaxed md:text-lg text-grey-400">
-                  {node.frontmatter.description}
-                </p>
+                <p className="leading-relaxed md:text-lg text-grey-400">{node.frontmatter.description}</p>
               </Link>
             </li>
           ))}
@@ -31,7 +29,7 @@ export default ({ data }) => {
 };
 
 export const query = graphql`
-  query MyQuery {
+  query EpisodeQuery {
     allMdx {
       edges {
         node {
