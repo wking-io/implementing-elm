@@ -1,6 +1,7 @@
 // Dependencies
 import React from 'react';
 import VisuallyHidden from '@reach/visually-hidden';
+import { graphql } from 'gatsby';
 
 // Components
 import Layout from '../components/layout';
@@ -80,7 +81,7 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query IndexQuery {
-    allMdx {
+    allMdx(filter: { frontmatter: { published: { ne: false } } }, sort: { fields: [frontmatter___date], order: ASC }) {
       edges {
         node {
           id

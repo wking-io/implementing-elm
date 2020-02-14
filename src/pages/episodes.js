@@ -30,7 +30,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   query EpisodeQuery {
-    allMdx {
+    allMdx(filter: { frontmatter: { published: { ne: false } } }, sort: { fields: [frontmatter___date], order: ASC }) {
       edges {
         node {
           id
@@ -41,6 +41,7 @@ export const query = graphql`
             title
             subtitle
             description
+            published
           }
         }
       }
