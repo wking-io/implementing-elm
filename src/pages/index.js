@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => (
             <GlitchFour className="glitch-04 absolute w-full inset-0 opacity-0" />
           </div>
           <p className="text-center">
-            <Link to="/104" className="btn btn--primary inline-block w-full md:w-3/5">
+            <Link to="/105" className="btn btn--primary inline-block w-full md:w-3/5">
               Listen To The Latest Episode
             </Link>
           </p>
